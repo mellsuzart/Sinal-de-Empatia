@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<head>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+    *{margin: 0; padding: 0; box-sizing: border-box; border: none; outline: none;}
+  	ul {list-style: none;}
+  	a {text-decoration: none;}
+    /*cabecalho*/
+    body{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 18px;
+
+    }
+    .nav{
+
+    	width: 100%;
+    	height:100%;
+    }
+
+    #menu ul {
+    padding-top:20px;
+    font-family: "Poppins",sans-serif;
+    width: 100%;
+    height:15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:white;
+    list-style:none;
+    text-align: center;
+    }
+    #menu ul li { display: inline;
+
+    margin-right:30px;
+    color: red;
+    width: 100%;
+    height:100%;
+
+    }
+
+
+    .linha{
+    padding: 20px 20px;
+    display: inline-block;
+
+    }
+    .botao1{
+    background-color:white;
+    color: #333;
+    text-decoration: none;
+    border-bottom:3px solid white;
+
+    }
+
+
+    .botao1:hover {
+    display: inline-block;
+    color:#458be2;
+
+    }
+
+    #menu ul li h6{
+    margin-right:50%;
+
+    }
+    .logo{
+    margin:-20px;
+    	width: 100px;
+    	height:100px;
+    }
+
+    .dropdown1 {
+    position: flex;
+    display: inline-block;
+
+    }
+
+    .dropdown1-content {
+    display: none;
+    position: fixed;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding-top: 15px;
+    text-align:center;
+    padding-left:10px;
+    padding-right:10px;
+
+    }
+
+    .dropdown1:hover .dropdown1-content {
+     display: block;
+     background-color:#fff;
+    color: #458be2;
+    }
+
+
+    .dropdownsep {
+      margin-top: 5px;
+    width: 200px;
+    height: 60px;
+    text-align:center;
+    }
+
+    .dropdownsep {
+    background: transparent;
+    color: #555;
+        margin-top: 5px;
+
+    }
+
+    .dropdownsep:hover,
+    .dropdownsep:focus {
+    	background: #eee;
+    color:#458be2;
+
+
+    }
+
+    img {
+      width: 175px;
+      height: 68px;
+      display: block;
+      margin: 15px;
+      }
+
+    .boner img {
+      width: 100%;
+      height: 300px;
+      display: block;
+     margin-left: auto;
+     margin-right: auto;
+
+    }
+
+	.cont {
+    font-size: 18px;
+	padding: 2% 10% 2% 10%;
+	text-align: justify;
+	}
+
+	.cont h1{
+	font-size: 50px;
+	padding-bottom: 15px;
+	font-weight: bold;
+	color: #4886d9;
+	 text-shadow: 2px 2px rgba(0,0,0,0.2);
+	}
+
+	.cont h2 {
+	font-size: 50px;
+	padding-bottom: 15px;
+	padding-top: 2%;
+	font-weight: bold;
+	color: #4886d9;
+	 text-shadow: 2px 2px rgba(0,0,0,0.2);
+	}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="icon" type="img/png" href="Ícone.png" sizes="1x1"/>
+<!--===============================================================================================-->
+<title> Sinal de Empatia </title>
+<meta charset="utf-8">
+
+</head>
+
+<body>
+
+
+  <%- include("./header.ejs"); %>
+
+  <!--===============================================================================================-->
+  	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/bootstrap/js/popper.js"></script>
+  	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/daterangepicker/moment.min.js"></script>
+  	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/countdowntime/countdowntime.js"></script>
+  <!--===============================================================================================-->
+  	<script src="js/main.js"></script>
+
+    <div class="boner">
+      <img src="Banner1.jpg">
+    </div>
+<div class="cont">
+  <h1> Propósito do Sinal de Empatia </h1>
+<a>
+&nbsp&nbsp&nbsp&nbsp Ao percebermos que o ensino de linguagem de sinais normalmente é muito escasso dentro do nosso ambiente escolar, decidimos realizar um site cuja sua proposta é auxiliar possa auxiliar professores, estudantes e quaisquer pessoas que tenham interesse em aprender a linguagem de sinais. <br>
+<br>&nbsp&nbsp&nbsp A linguagem brasileira de sinais no ambiente escolar é de suma importância, pois gera um local de estudos acolhedor, inclusivo e que agrega a empatia. Todo educador, durante sua graduação, deveria ter contato com a língua de sinais, para se comunicar com seus alunos, ou até mesmo com outros funcionários da escola.
+</a>
+
+</div>
+
+<%- include("./vlibras.ejs"); %>
+
+  </body>
+  </html>

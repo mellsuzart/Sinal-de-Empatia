@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<head>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{margin: 0; padding: 0;box-sizing: border-box; border: none; outline: none; font-family: "Poppins",sans-serif;}
+	ul {list-style: none;}
+	a {text-decoration: none;}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	/*cabecalho*/
+	body{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+
+	}
+	.nav{
+
+		width: 100%;
+		height:100%;
+	}
+	#menu ul {
+
+	padding-top:20px;
+	width: 100%;
+	height:15%;
+	font-size: 16px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color:white;
+	list-style:none;
+	text-align: center;
+	}
+	#menu ul li {
+	display: inline;
+	margin-right:30px;
+	color: red;
+	width: 100%;
+	height:100%;
+	}
+	.linha{
+	padding: 20px 20px;
+	display: inline-block;
+	}
+	.botao1{
+	background-color:white;
+	color: #333;
+	text-decoration: none;
+	border-bottom:3px solid white;
+	}
+	.botao1:hover {
+	display: inline-block;
+	color:#458be2;
+	}
+	#menu ul li h6{
+	margin-right:50%;
+	}
+	.logo{
+	margin:-20px;
+	width: 100px;
+	height:100px;
+	}
+	.dropdown1 {
+	position: flex;
+	display: inline-block;
+  padding-left: 40px;
+    border-radius: 10px;
+	}
+	.dropdown1-content {
+	display: none;
+	position: fixed;
+	background-color: white;
+	min-width: 100px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding-top: 15px;
+	text-align:center;
+	padding-left:15px;
+	padding-right:15px;
+	}
+	.dropdown1:hover .dropdown1-content {
+	display: block;
+	background-color:#fff;
+	color: #458be2;
+	}
+	.dropdownsep {
+	margin-top: 5px;
+	width: 200px;
+	height: 60px;
+	text-align:center;
+
+	}
+	.dropdownsep {
+	background: transparent;
+	color: #555;
+	margin-top: 5px;
+
+	}
+	.dropdownsep:hover,
+	.dropdownsep:focus {
+	background: #eee;
+	color:#458be2;
+  border-radius: 2px;
+	}
+    img {
+      width: 175px;
+      height: 68px;
+      display: block;
+      margin: 15px;
+      }
+
+    .boner1 img {
+    float: right;
+    border: transparent thin solid;
+    width: 500px;
+    height: 320px;
+    border-radius: 8px;
+    }
+
+	.cont {
+    font-size: 16px;
+	padding: 2% 10% 2% 10%;
+	text-align: justify;
+	}
+
+	.cont h1{
+	font-size: 35px;
+	padding-bottom: 15px;
+	font-weight: bold;
+	color: #4886d9;
+
+	}
+
+	.cont h2 {
+	font-size: 35px;
+	padding-bottom: 15px;
+	padding-top: 2%;
+	font-weight: bold;
+	color: #4886d9;
+
+	}
+      	.sexto {
+          	padding: 2% 50% 2% 1%;
+        }
+        .sexto2 {
+            padding: 2% 10% 2% 10%;
+            text-align: center;
+
+        }
+          .sexto3 {
+          padding: 2% 10% 2% 10%;
+            background-color:#a3d1c9;
+            width:100%;
+        }
+
+        .centro {
+          background-color: #4886d9;
+          text-align: left;
+          	padding: 2% 10% 2% 10%;
+          text-decoration: none;
+          color: inherit;
+        }
+
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="icon" type="img/png" href="ícone.png" sizes="1x1"/>
+<title> Sinal de Empatia </title>
+<meta charset="utf-8">
+
+</head>
+
+<body>
+
+
+  <%- include("./header.ejs"); %>
+
+  <!--===============================================================================================-->
+  	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/bootstrap/js/popper.js"></script>
+  	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/daterangepicker/moment.min.js"></script>
+  	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/countdowntime/countdowntime.js"></script>
+  <!--===============================================================================================-->
+  	<script src="js/main.js"></script>
+
+
+<div class="cont">
+  <div class="boner1">
+    <img src="img1.jpg">
+  </div>
+<h1 id = "1"> Acessibilidade no ambiente escolar </h1>
+<div class="sexto"><a>
+Toda pessoa com deficiência (física, auditiva, visual, mental...) tem direito à igualdade de ensino, portanto, se reserva o direito de adaptação da instituição e do modo de aula para o aprendizado do aluno, deixando a este, as mesmas chances de graduação que todos os outros alunos possuem, de acordo com a Lei n. 9.394/96, (LDB, 1996). <br>
+A rede de ensino deve comprometer-se a fazer tais adaptações para auxiliar os alunos que as necessitam, porém, apesar do alto grau de relevância, muitas instituições de ensino não estão preparadas para receber alunos com deficiência, seja ela qual for.
+</a></div>
+
+
+<br><br>
+<div class="sexto2">
+  <div class="sexto3">
+<h2 id = "2"> Dicas para iniciantes no idioma </h2>
+
+  <a>
+Confira as seguintes dicas para iniciantes no idioma de libras a seguir: <br> <br>
+1 – Memorização dos sinais <br>
+Memorizar os sinais ajuda a ter uma memória muscular melhor. Isso lhe ajudará a conseguir fazer os sinais de uma melhor forma e automática. <br> <br>
+2 – Estudo do vocabulário <br>
+Estudar o vocabulário de libras auxilia na abrangência de sinais que você pode adquirir, assim, tendo mais experiência do vocabulário.<br> <br>
+3 – Aplicativos voltados para o ensino de libras <br>
+Utilizar aplicativos para aprender libras é uma boa alternativa, já que fica de forma mais prática e fácil de aprender, pois o conhecimento estará literalmente na palma de sua mão. Um aplicativo recomendado seria o Hand Talk, aplicativo reconhecido pela ONU. <br> <br>
+4 – Expressão facial <br>
+Prestar atenção nas expressões faciais pode lhe ajudar a entender o verdadeiro significado da fala, pois a partir da expressão facial, você pode entender quando a pessoa está querendo dar ênfase em algo ou até mesmo demonstrar o sentimento daquela palavra. <br> <br>
+5 – Estudo diário da língua <br>
+Ter uma rotina diária estudando libras com certeza trará resultado muito mais rápido sobre sua aprendizagem.
+</a></div>
+
+<br><br>
+</div>
+<div class="boner1">
+  <img src="img4.jpg">
+</div>
+
+<h2 id = "3"> Acessibilidade digital </h2>
+<div class="sexto"><a>
+Atualmente, apenas 2% dos sites brasileiros são acessíveis quando o assunto é libras. <br>
+Então para ajudar neste déficit a LAVID (Laboratório de Aplicações de Vídeo Digital) desenvolveram o VLibras, uma plataforma digital que tem como foco a inclusão de deficientes auditivos, fazendo com que consigam acessar conteúdos digitais em forma de linguagem de sinais. <br>
+E para aparelhos móveis, como celular, tem a Hand Talk, que é um aplicativo voltado para a aprendizagem de libras e tem funções como tradutor de voz e texto para libras.
+</a></div>
+
+<br><br>
+<div class="sexto2">
+    <div class="sexto3">
+<h2 id = "4"> Fundações de apoio à PCDs </h2>
+<a>
+De acordo com esse déficit da falta de ensino de libras existente nas escolas brasileiras, logo abaixo estará listado algumas escolas na região de São Paulo (SP) que tem o devido suporte para deficientes auditivos. <br> <br>
+Unidade Higienópolis: <br>
+Av. Higienópolis, 996 <br>
+Higienópolis - São Paulo - SP - Brasil <br>
+Cep 01238-910 <br>
+Tel: 4613-8478 <br> <br>
+
+Polo Guarulhos: <br>
+Avenida Bom Clima, 44 <br>
+Jardim Bom Clima – Guarulhos - SP - Brasil <br>
+Cep: 07196-220 <br>
+Tel: (11) 2409-4103 / (11) 4378-7803 <br> <br>
+
+Unidade Paulista: <br>
+Rua Itapeva, 490 <br>
+Bela Vista - São Paulo - SP - Brasil <br>
+Cep: 01332-000 <br>
+Tel: (11) 2097-6866 / (11) 3715-9086 <br> <br>
+
+IST - Instituto Santa Teresinha: <br>
+Av. Bosque da Saúde, 1615 <br>
+Bosque da Saúde - São Paulo - SP - Brasil <br>
+Tel: (11) 5581-8084 <br>
+recepcaoist@terra.com.br <br> <br>
+
+EMEE Vera Lucia Aparecida Ribeiro (Zona Oeste): <br>
+Rua Benedito Pereira nº206 -Jardim Líbano – CEP 05138-120 <br>
+Tel: (11) 3906-72-29 / 3906-70-57 <br>
+Manhã / Tarde – DRE: Pirituba
+</a>
+
+</div>
+</div>
+
+<h2 id = "3"> Contatos de Intérpretes - Região de São Paulo </h2>
+<div class="sexto"><a>
+    (11) 9 9931-5251 <br>
+  juliana.psilibras@gmail.com<br>
+
+<br><br>  (11) 3804-5686<br>
+contato@greensound.com.br<br>
+<br><br>
+(11) 2631-4473<br>
+contato@educalibras.com.br<br>
+
+</a></div>
+
+</div>
+<%- include("./footer.ejs"); %>
+
+<%- include("./vlibras.ejs"); %>
+</body>
+
+</html>

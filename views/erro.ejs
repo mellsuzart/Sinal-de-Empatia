@@ -1,0 +1,44 @@
+<% if (erro == "ja esta logado") { %>
+
+    <script>
+        alert("Você já está logado");
+        window.location.href = "/";
+    </script>
+
+<% } %>
+
+<% if (erro == "credenciais") { %>
+
+    <script>
+        alert("Credenciais Incorretas");
+        window.location.href = "/log";
+    </script>
+
+<% } %>
+
+<% if (erro == "falha no cadastro") { %>
+
+    <script>
+        alert("Falha no cadastro");
+        window.location.href = "/cad";
+    </script>
+
+<% } %>
+
+<% if (erro == "senhas diferentes") { %>
+
+    <script>
+        alert("as senhas não conferem");
+        window.location.href = "/cad";
+    </script>
+
+<% } %>
+
+<% if (erro == "Email ja cadastrado") { %>
+
+    <script>
+        alert("Email já existe em nosso banco de dados");
+        window.location.href = "/perfil";
+    </script>
+
+<% } %>

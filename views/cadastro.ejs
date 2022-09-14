@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+
+	<head>
+		<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{margin: 0; padding: 0;box-sizing: border-box; border: none; outline: none; font-family: "Poppins",sans-serif;}
+	ul {list-style: none;}
+	a {text-decoration: none;}
+	/*cabecalho*/
+	body{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+
+	}
+	.nav{
+
+		width: 100%;
+		height:100%;
+	}
+	#menu ul {
+	padding-top:20px;
+	width: 100%;
+	height:15%;
+	font-size: 18px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color:white;
+	list-style:none;
+	text-align: center;
+	}
+	#menu ul li {
+	display: inline;
+	margin-right:30px;
+	color: red;
+	width: 100%;
+	height:100%;
+	}
+	.linha{
+	padding: 20px 20px;
+	display: inline-block;
+	}
+	.botao1{
+	background-color:white;
+	color: #333;
+	text-decoration: none;
+	border-bottom:3px solid white;
+	}
+	.botao1:hover {
+	display: inline-block;
+	color:#458be2;
+	}
+	#menu ul li h6{
+	margin-right:50%;
+	}
+	.logo{
+	margin:-20px;
+	width: 100px;
+	height:100px;
+	}
+	.dropdown1 {
+	position: flex;
+	display: inline-block;
+	}
+	.dropdown1-content {
+	display: none;
+	position: fixed;
+	background-color: white;
+	min-width: 100px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding-top: 15px;
+	text-align:center;
+	padding-left:10px;
+	padding-right:10px;
+	}
+	.dropdown1:hover .dropdown1-content {
+	display: block;
+	background-color:#fff;
+	color: #458be2;
+	}
+	.dropdownsep {
+	margin-top: 5px;
+	width: 200px;
+	height: 60px;
+	text-align:center;
+	}
+	.dropdownsep {
+	background: transparent;
+	color: #555;
+	margin-top: 5px;
+	}
+	.dropdownsep:hover,
+	.dropdownsep:focus {
+	background: #eee;
+	color:#458be2;
+	}
+	img {
+	width: 175px;
+	height: 68px;
+	display: block;
+	margin: 15px;
+	}
+	.logar {
+		background: linear-gradient(45deg,  #6868ec, #58d0ff);
+		background-repeat: no-repeat;
+		min-height: 85vh;
+		min-width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+
+main.container {
+		background: white;
+		min-width: 320px;
+		min-height: 50vh;
+		padding: 2rem;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+		border-radius: 8px;
+}
+
+main h2 {
+		font-weight: 600;
+		margin-bottom: 2rem;
+		position: relative;
+}
+
+main h2::before {
+		content: '';
+		position: absolute;
+		height: 4px;
+		width: 25px;
+		bottom: 3px;
+		left: 0;
+		border-radius: 8px;
+		background: #58d0ff;
+}
+
+form {
+		display: flex;
+		flex-direction: column;
+}
+
+.input-field {
+		position: relative;
+}
+
+form .input-field:first-child {
+		margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+		content: '';
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		bottom: -5px;
+		left: 0;
+		background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+		content: '';
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		bottom: -5px;
+		margin-bottom: -5px;
+		left: 0;
+		background: linear-gradient(45deg, #458BE2, #58d0ff);
+		transform: scaleX(0);
+		transition: all .3s ease-in-out;
+		transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+		transform: scaleX(1);
+}
+
+.input-field input {
+		outline: none;
+		font-size: 0.9rem;
+		color: rgba(0, 0, 0, 0.7);
+		width: 100%;
+}
+
+.input-field input::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		margin-bottom: 0.5rem;
+	}
+
+form input[type="submit"] {
+		padding: 0.4rem;
+		width: 100%;
+		background: linear-gradient(to left, #4886D9, #58d0ff);
+		cursor: pointer;
+		color: white;
+		font-size: 0.9rem;
+		font-weight: 300;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+		letter-spacing: 0.5px;
+		background: linear-gradient(to left, #58D0FF, #4886D9);
+}
+
+input[type="file"] {
+	margin-bottom: -10px;
+}
+
+#or {
+	margin-top: 2rem;
+}
+.or {
+	color: #4886D9;
+}
+.or:hover {
+	color: #22B7F2;
+}
+p {
+	margin-top: 5px;
+}
+.centro {
+	background-color: #FFFFFF;
+	text-align: left;
+	padding: 2% 10% 2% 10%;
+	text-decoration: none;
+	color: inherit;
+}
+
+</style>
+		<meta charset = "utf-8"/>
+		<meta name = "description" content = "Descrição"/>
+		<meta name = "keywords" content = "palavras-chave"/>
+		<title> Cadastro </title>
+
+
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!--===============================================================================================-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--===============================================================================================-->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
+<!--===============================================================================================-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!--===============================================================================================-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--===============================================================================================-->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;900&display=swap" rel="stylesheet">
+<!--===============================================================================================-->
+<link rel="icon" type="img/png" href="ícone.png" sizes="1x1"/>
+<title> Sinal de Empatia </title>
+<meta charset="utf-8">
+
+</head>
+
+<body>
+
+
+  	<%- include("./header.ejs"); %>
+
+  <!--===============================================================================================-->
+  	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/bootstrap/js/popper.js"></script>
+  	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/daterangepicker/moment.min.js"></script>
+  	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+  	<script src="vendor/countdowntime/countdowntime.js"></script>
+  <!--===============================================================================================-->
+  	<script src="js/main.js"></script>
+		<div class="logar">
+	 	<main class="container">
+				<h2> Cadastro </h2>
+		<form method = "post" action = "/" enctype="multipart/form-data">
+      <!--  #email:valid {}
+            #email:invalid {} -->
+			<div class="input-field">
+				<p>E-mail</p>
+				 	<div class="input-field">
+			<input type = "email" name = "user[email]" placeholder = "email..." required>
+				 <div class="underline"></div>
+			 </div>
+
+				 <p>Nome de usuário</p>
+				  	<div class="input-field">
+			<input type = "text" name = "user[nome]" placeholder = "nome de usuario..." required>
+				 <div class="underline"></div>
+			 </div>
+
+				 <p>Senha</p>
+				  	<div class="input-field">
+			<input type = "password" name = "user[senha]" placeholder = "senha..." required>
+				 <div class="underline"></div>
+			 </div>
+
+				 <p>Confirmação de senha</p>
+				  	<div class="input-field">
+			<input type = "password" name = "user[confirm_senha]" placeholder = "confirmar senha..." required>
+				 <div class="underline"></div>
+			 </div>
+			<br>	 <p>Insira uma foto de perfil</p>
+			<input type = "file" name = "foto" accept = "image/png, image/jpeg" /><br><br>
+			<input type = "submit" value = "Cadastro">
+		</form>
+		<p id="or"> Já possuí um cadastro? <a class="or" href="/log">Faça o Login</a>. </p>
+	</div>
+</div>
+<%- include("./footer.ejs"); %>
+<%- include("./vlibras.ejs"); %>
+
+	</body>
+
+</html>

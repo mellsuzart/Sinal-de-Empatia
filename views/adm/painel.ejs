@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <title> Painel de ADM </title>
+
+        <style>
+
+          body{
+            text-align: center;
+            align-items: center;
+            background: linear-gradient(to left, #4886D9, #58D0FF);
+          }
+
+          .central {
+            padding-top: 5%;
+            width: auto;
+            min-height: 200px;
+            background-color: rgba(255, 255, 255, 0.7);
+          }
+
+          h1 {
+            margin-bottom: 4%;
+          }
+
+          table{
+            border: 1px solid black;
+            width: 99%;
+            text-align: center;
+          }
+
+          tr{
+            border: 1px solid black;
+            margin: 1%;
+          }
+
+          th{
+            border: 1px solid black;
+          }
+
+          td{
+            border: 1px solid black;
+            padding: 1%;
+            min-height: 20px;
+          }
+
+          label{
+            padding-right: 10%;
+          }
+
+          form input[type="submit"] {
+                margin-top: 2rem;
+                padding: 0.4rem;
+                margin-top: -1%;
+                margin-right: 5%;
+                margin-bottom: 2%;
+                width: 25%;
+                background: linear-gradient(to left, #4886D9, #58D0FF);
+                cursor: pointer;
+                color: white;
+                font-size: 0.9rem;
+                font-weight: 300;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+            }
+
+            form input[type="submit"]:hover {
+                letter-spacing: 0.5px;
+                background: linear-gradient(to left, #58D0FF, #4886D9);
+            }
+
+            .delete input[type="submit"] {
+              width: 100%;
+            }
+
+            .delete input[type="submit"]:hover {
+              letter-spacing: 0;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+      <div class = "central">
+
+        <h1> Qual tabela deseja olhar, ADM? </h1>
+
+        <form action = "/checkdois" method = "POST">
+        
+          <input type = "submit" name = "tabelas" value = "usr_cad">
+          <input type = "submit" name = "tabelas" value = "forum">
+        
+        </form>
+
+        <% if(tabela == "usr_cad") { %>
+
+          <table>
+              <thead>
+                <tr>
+                  <th>
+                    Nome
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th>
+                    Senha
+                  </th>
+                  <th>
+                    Foto
+                  </th>
+                  <th>
+                  Deletar
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              
+              <% for (var i = 0; i < dados.length; i++){ %>
+
+                <tr>
+                    <td>
+                      <%= dados[i].user %>
+                    </td>
+                    <td>
+                      <%= dados[i].email %>
+                    </td>
+                    <td>
+                      <%= dados[i].senha %>
+                    </td>
+                    <td>
+                      <%= dados[i].foto %>
+                    </td>
+                    <td>
+                      <form action = "/deleteuser" class = "delete" method = "POST"> <input type = "hidden" name = "delete" value = "<%= dados[i].user %>">
+                        <input type = "submit" value = "deletar">
+                      </form>
+                    </td>
+                </tr>
+
+              <% } %>
+                      
+              </tbody>
+            </table>
+
+        <% } else if (tabela == "forum") { %>
+
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Nome
+                </th>
+                <th>
+                  Titulo do post
+                </th>
+                <th>
+                  Conteúdo
+                </th>
+                <th>
+                Deletar
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            
+            <% for (var i = 0; i < dados.length; i++){ %>
+
+              <tr>
+                  <td>
+                    <%= dados[i].user %>
+                  </td>
+                  <td>
+                    <%= dados[i].titulo %>
+                  </td>
+                  <td>
+                    <label> <%= dados[i].mensage %> </label>
+                  </td>
+                  <td>
+                    <form action = "/deletemensage" class = "delete" method = "POST"> <input type = "hidden" name = "delete" value = "<%= dados[i].titulo %>">
+                      <input type = "submit" value = "deletar">
+                    </form>
+                  </td>
+              </tr>
+
+            <% } %>
+                    
+            </tbody>
+          </table>
+
+        <% } %>
+
+      </div>
+
+    </body>
+
+</html>

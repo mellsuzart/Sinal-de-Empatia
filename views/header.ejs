@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <nav id="menu" class="menu">
+
+      <ul>
+
+          <li><a class="linha botao1" href="/">Home</a></li>
+
+  		<li class="dropdown1">
+    <a class="linha botao1" href="/acessibilidade">Acessibilidade</a>
+    <div class="dropdown1-content">
+
+   <a href="acessibilidade#1"><p class="dropdownsep">Acessibilidade no ambiente escolar</p></a>
+
+
+
+    <a href="acessibilidade#2"> <p  class="dropdownsep">Dicas para iniciantes no idioma</p></a>
+
+
+    <a href="acessibilidade#3"><p  class="dropdownsep">Conceitos explicativos</p></a>
+
+
+
+    <a href="acessibilidade#4"><p  class="dropdownsep">Fundações de apoio à PCDs</p></a>
+
+    <a href="acessibilidade#4"><p  class="dropdownsep">Intérpretes</p></a>
+    </div>
+  </li>
+      <li><a href="/">
+	<img src="Logo.png"> </a></li>
+
+  <% if (existe == 1) { %>
+
+  <li><a class="linha botao1" href="/forum">Fórum</a> </li>
+  <li><a class="linha botao1" href="/perfil">Perfil</a> </li>
+
+  <% } else { %>
+
+  <li><a class="linha botao1" href="/cad">Cadastro</a>  </li>
+  <li><a class="linha botao1" href="/log">Login</a></li>
+
+  <% } %>
+
+      </ul>
+  </nav>
+  </div>
